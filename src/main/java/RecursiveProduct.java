@@ -5,12 +5,16 @@ public class RecursiveProduct {
         Scanner input = new Scanner(System.in);
         int[] numbers = new int[5];
 
+        System.out.println("Enter 5 numbers to calculate product:");
         for (int i = 0; i < 5; i++) {
-            System.out.print("Please enter number: " + (i + 1) + ": ");
+            System.out.printf("Enter number %d of 5: ", (i + 1));
             numbers[i] = input.nextInt();
         }
 
-        System.out.println("Product: " + calculateProduct(numbers, 0));
+        // Calculate and display result
+        int product = calculateProduct(numbers, 0);
+        System.out.println("\nThe product of your five numbers is: " + product);
+
         input.close();
     }
 
